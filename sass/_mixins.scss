@@ -1,0 +1,6 @@
+@mixin section-padding {
+  padding: 16px;
+  @media #{$bp-desktop} {
+    padding: 48px;
+  }
+}

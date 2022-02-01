@@ -1,0 +1,91 @@
+.btn {
+  cursor: pointer;
+  height: 56px;
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  color: $white;
+  font-family: inherit;
+  font-size: 1em;
+  @media #{$bp-desktop} {
+    width: 147px;
+    height: 28px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  &--gradient {
+    background-image: $heat-colour;
+  }
+  &--purple {
+    background-color: $purple;
+  }
+  &--big {
+    @media #{$bp-desktop} {
+      height: 37px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+}
+
+.input {
+  background-color: $neutral;
+  border-radius: 30px;
+  padding: 0 16px;
+  height: 56px;
+  @media #{$bp-desktop} {
+    background-color: $white;
+    border: 1px solid rgba(226, 226, 232, 0.5);
+    border-radius: 50px;
+    height: 36px;
+  }
+}
+
+@keyframes spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  display: flex;
+  position: fixed;
+  width: 00px;
+  height: 00px;
+  border-top: 5px solid $green;
+  border-right: 5px solid $purple;
+  border-bottom: 5px solid $green;
+  border-left: 5px solid $purple;
+  border-radius: 50%;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform-origin: center;
+  &--active {
+    animation: spinner 1s infinite linear;
+    opacity: 1;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.sr-mobile {
+  @media (max-width: $bp-sr-mobile) {
+    position: absolute;
+    left: -100000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  left: -100000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

@@ -1,0 +1,27 @@
+/* fonts */
+
+$font-size-mobile: 16px;
+$font-size-desktop: 12px;
+$font-family: "Poppins", sans-serif;
+
+/* colors */
+
+$white: #ffffff;
+$dark: #131212;
+$neutral: #f6f7fa;
+
+$green: #44cdb2;
+$purple: #b1aed0;
+
+$heat-colour: linear-gradient(122.99deg, #4cb8c4 7.68%, #3ae69e 81.37%);
+
+/* break-points */
+
+$bp-sr-mobile: 990px;
+
+$bp-desktop: (
+  min-width: 990px,
+);
+$bp-xxl: (
+  min-width: 1920px,
+);

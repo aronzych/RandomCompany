@@ -1,0 +1,19 @@
+html {
+  scroll-behavior: smooth;
+  font-size: $font-size-mobile;
+  @media #{$bp-desktop} {
+    font-size: $font-size-desktop;
+  }
+}
+
+body {
+  font-family: $font-family;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  @media #{$bp-desktop} {
+    flex-direction: row;
+  }
+}

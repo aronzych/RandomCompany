@@ -1,0 +1,117 @@
+/* CONTENT - RIGHT SECTION */
+
+.content {
+  @include section-padding;
+  padding-top: 80px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  @media #{$bp-desktop} {
+    flex-basis: 50%;
+    @include section-padding;
+  }
+  &__flash {
+    position: absolute;
+    z-index: -1;
+    background: $heat-colour;
+    width: 369px;
+    height: 369px;
+    top: -270px;
+    left: -180px;
+    opacity: 0.5;
+    filter: blur(100px);
+    @media #{$bp-desktop} {
+      display: none;
+    }
+  }
+  &__main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media #{$bp-xxl} {
+      padding-right: 10vw;
+    }
+  }
+  &__header {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 50px;
+    padding-bottom: 10px;
+  }
+  &__join {
+    line-height: 50px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__label {
+    margin-left: 15px;
+  }
+  &__field {
+    flex-basis: 100%;
+    padding: 15px 0;
+    @media #{$bp-desktop} {
+      flex-basis: 50%;
+      padding-right: 10%;
+    }
+    &--email {
+      @media #{$bp-desktop} {
+        flex-basis: 100%;
+        padding-right: 60%;
+      }
+    }
+  }
+  &__input {
+    width: 100%;
+  }
+  &__submit {
+    margin-top: 15px;
+    flex-basis: 48%;
+    @media #{$bp-desktop} {
+      flex-basis: auto;
+      margin-right: 23px;
+    }
+  }
+  &__cancel {
+    margin-top: 15px;
+    flex-basis: 48%;
+    @media #{$bp-desktop} {
+      flex-basis: auto;
+      margin-right: auto;
+    }
+  }
+  &__error {
+    color: #ff0000;
+    flex-basis: 100%;
+    padding: 10px 10px;
+  }
+}
+
+.already-registered {
+  margin-top: 25px;
+  line-height: 50px;
+  & a {
+    text-decoration: underline;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  line-height: 30px;
+  font-size: 10px;
+  color: $purple;
+  &__eu {
+    width: 45px;
+  }
+  &__nav {
+    text-align: right;
+    font-weight: 500;
+    color: $dark;
+  }
+}

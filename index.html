@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Zadanie 1connect</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <figure class="header__logo">
+          <img
+            class="header__logo header__logo--mobile"
+            onclick="window.location.href='#'"
+            src="assets/logo-mobile.png"
+            alt="Heat Service - przejdź na stronę główną"
+          />
+          <img
+            class="header__logo header__logo--desktop"
+            src="assets/logo-desktop.png"
+            alt="Heat Service - przejdź na stronę główną"
+          />
+        </figure>
+        <div class="header__content">
+          <div class="header__text-container">
+            <span class="header__text header__text--purple header__text--bold"
+              >Uzyskaj pełny<br /></span
+            ><span class="header__text header__text--purple">dostęp do </span
+            ><span class="header__text header__text--green">urządzeń<br /></span
+            ><span class="header__text header__text--bold header__text--green"
+              >grzewczych</span
+            >
+          </div>
+          <p class="header__slug">Zarządzaj swoim ciepłem razem z nami</p>
+          <button
+            class="btn btn--gradient btn--big header__button"
+            onclick="window.location.href='#register'"
+          >
+            Rejestracja
+          </button>
+        </div>
+        <div class="header__flash" aria-hidden="true"></div>
+        <div
+          class="header__flash header__flash--second"
+          aria-hidden="true"
+        ></div>
+      </header>
+
+      <div class="content">
+        <div class="content__flash" aria-hidden="true"></div>
+        <nav>
+          <div class="nav-hamburger" onclick="openMenu()">
+            ☰
+            <p class="sr-only">- Otwórz menu nawigacyjne</p>
+          </div>
+
+          <ul class="nav">
+            <li class="nav__header">
+              <img
+                class="nav__logo"
+                onclick="window.location.href='#'"
+                src="assets/logo-desktop.png"
+                alt="Heat Service - przejdź na
+              stronę główną"
+              />
+              <div class="nav__close" onclick="closeMenu()">
+                X
+                <p class="sr-only">- Zamknij menu nawigacyjne</p>
+              </div>
+            </li>
+            <li class="nav__item nav__item--home"><a href="#">Home</a></li>
+            <li class="nav__item"><a href="#">Dla producentów</a></li>
+            <li class="nav__item"><a href="#">Blog</a></li>
+            <li class="nav__item"><a href="#">Faq</a></li>
+            <li class="nav__item">
+              <button
+                class="btn btn--gradient nav__btn"
+                onclick="window.location.href='#'"
+              >
+                Zaloguj się
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <main class="content__main">
+          <h2 class="content__header" id="register">Rejestracja</h2>
+          <p class="content__join">Dołącz do platformy HeatService</p>
+          <form class="form form--register">
+            <label class="form__field"
+              ><p class="form__label sr-mobile">Imię</p>
+              <input
+                class="input form__input"
+                type="text"
+                placeholder="Imię"
+                required
+            /></label>
+            <label class="form__field"
+              ><p class="form__label sr-mobile">Nazwisko</p>
+              <input
+                class="input form__input"
+                type="text"
+                placeholder="Nazwisko"
+                required
+            /></label>
+            <label class="form__field form__field--email"
+              ><p class="form__label sr-mobile">E-mail</p>
+              <input
+                class="input form__input"
+                type="email"
+                placeholder="Email"
+                required
+            /></label>
+            <label class="form__field"
+              ><p class="form__label sr-mobile">Hasło</p>
+              <input
+                class="input form__input password"
+                type="password"
+                placeholder="Hasło"
+                required
+            /></label>
+            <label class="form__field"
+              ><p class="form__label sr-mobile">Powtórz hasło</p>
+              <input
+                class="input form__input password-repeat"
+                type="password"
+                placeholder="Powtórz hasło"
+                required
+            /></label>
+            <button type="submit" class="btn btn--gradient form__submit">
+              Wyślij
+            </button>
+            <button type="cancel" class="btn btn--purple form__cancel">
+              Anuluj
+            </button>
+            <p class="form__error" aria-hidden="true"></p>
+          </form>
+          <p class="already-registered">
+            Jeśli posiadasz konto <a href="#">Zaloguj się</a>
+          </p>
+        </main>
+        <footer class="footer">
+          <div>
+            <figure>
+              <img
+                src="assets/eu-logo.svg"
+                alt="Logo Unia Europejska"
+                class="footer__eu"
+              />
+            </figure>
+            <p>© Heat Service 2021 | BOOST BPO Sp. z o.o.</p>
+          </div>
+          <ul class="footer__nav">
+            <li><a href="#">Projekty UE</a></li>
+            <li><a href="#">Regulamin</a></li>
+            <li><a href="#">Polityka prywatności</a></li>
+          </ul>
+        </footer>
+      </div>
+      <!-- end of content-->
+    </div>
+    <!-- end of container-->
+
+    <div class="loader"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
